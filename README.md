@@ -188,8 +188,10 @@ clusterAgent:
 clusterAgent:
   replicas: 2
   pdb:
-    create: true
+    create: true  # PodDisruptionBudget - ensures at least 1 replica during node drains/upgrades
 ```
+
+> **PDB (PodDisruptionBudget):** Kubernetes resource that prevents all Cluster Agent replicas from being terminated simultaneously during voluntary disruptions (node drains, cluster upgrades). Ensures node agents always have at least one Cluster Agent to connect to.
 
 ## Troubleshooting
 
