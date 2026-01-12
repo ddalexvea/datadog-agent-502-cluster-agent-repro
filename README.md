@@ -55,8 +55,6 @@ datadog:
   logs:
     enabled: true
     containerCollectAll: true
-  clusterChecks:
-    enabled: true
 
 clusterAgent:
   enabled: true
